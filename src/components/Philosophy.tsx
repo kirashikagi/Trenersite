@@ -19,13 +19,13 @@ export default function Philosophy() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="space-y-6 text-white/60 font-light leading-relaxed"
+            className="space-y-6 text-brand-text/60 font-light leading-relaxed"
           >
             <p>
               Мы верим, что христианское свидетельство — это не искусство побеждать в спорах, 
               а искусство строить мосты. В мире, полном шума и критики, важно сохранять кротость и трепет.
             </p>
-            <p className="border-l border-brand-gold/30 pl-6 italic text-brand-gold/80">
+            <p className="border-l border-brand-gold/30 pl-6 italic text-brand-gold">
               «Будьте всегда готовы всякому, требующему у вас отчета в вашем уповании, 
               дать ответ с кротостью и благоговением».
             </p>
@@ -40,12 +40,12 @@ export default function Philosophy() {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="aspect-square glass rounded-full flex items-center justify-center relative"
+          className="aspect-square glass rounded-full flex items-center justify-center relative bg-white/20"
         >
           <div className="absolute inset-0 border border-brand-gold/10 rounded-full animate-[spin_20s_linear_infinite]" />
           <div className="text-center p-12">
             <span className="text-6xl font-serif text-brand-gold block mb-4">†</span>
-            <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-white/30">Основание смыслов</span>
+            <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-brand-text/30">Основание смыслов</span>
           </div>
         </motion.div>
       </div>

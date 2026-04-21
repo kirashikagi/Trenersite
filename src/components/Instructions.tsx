@@ -32,11 +32,11 @@ export default function Instructions() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-serif mb-6"
+          className="text-4xl md:text-5xl font-serif mb-6 text-brand-text"
         >
           Как это <span className="italic text-brand-gold">работает</span>
         </motion.h2>
-        <p className="text-white/40 max-w-lg mx-auto uppercase text-[10px] tracking-[0.2em] font-bold">
+        <p className="text-brand-text/40 max-w-lg mx-auto uppercase text-[10px] tracking-[0.2em] font-bold">
           Четыре шага к уверенному свидетельству
         </p>
       </div>
@@ -51,11 +51,11 @@ export default function Instructions() {
             transition={{ delay: index * 0.1 }}
             className="text-center"
           >
-            <div className="w-16 h-16 rounded-2xl glass border-brand-gold/20 flex items-center justify-center mx-auto mb-6 text-brand-gold">
+            <div className="w-16 h-16 rounded-2xl glass border-brand-gold/20 flex items-center justify-center mx-auto mb-6 text-brand-gold bg-white/50">
               <step.icon size={28} strokeWidth={1.5} />
             </div>
-            <h3 className="text-xl font-serif mb-3 italic">{step.title}</h3>
-            <p className="text-xs text-white/40 leading-relaxed font-light">
+            <h3 className="text-xl font-serif mb-3 italic text-brand-text">{step.title}</h3>
+            <p className="text-xs text-brand-text/40 leading-relaxed font-light">
               {step.desc}
             </p>
           </motion.div>

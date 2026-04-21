@@ -10,10 +10,10 @@ export default function Navbar() {
       className="max-w-[960px] mx-auto flex items-center justify-between py-8 px-4"
     >
       <div className="flex items-center gap-2">
-        <div className="w-8 h-8 border border-brand-gold rounded-full flex items-center justify-center">
-          <span className="text-brand-gold text-xs font-serif italic">V</span>
+        <div className="w-8 h-8 border border-brand-gold rounded-full flex items-center justify-center bg-white/50">
+          <span className="text-brand-gold text-sm font-serif italic">†</span>
         </div>
-        <span className="text-lg font-semibold tracking-tight">
+        <span className="text-lg font-bold tracking-tight text-brand-text">
           Вера <span className="text-brand-gold font-serif">+1</span>
         </span>
       </div>
@@ -21,15 +21,15 @@ export default function Navbar() {
       <div className="flex items-center gap-8">
         <nav className="hidden md:flex gap-8">
           <a href="#" className="nav-link">О проекте</a>
-          <a href="#" className="nav-link">Методология</a>
-          <a href="#" className="nav-link">Сообщество</a>
+          <a href="#philosophy" className="nav-link">Философия</a>
+          <a href="#features" className="nav-link">Галерея</a>
         </nav>
         
         <a 
           href="https://faith-trener.vercel.app" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="hidden sm:inline-block gold-gradient px-6 py-2 rounded-full text-brand-dark font-bold text-[10px] uppercase tracking-widest shadow-[0_4px_15px_rgba(212,175,55,0.3)] hover:scale-105 transition-transform"
+          className="hidden sm:inline-block gold-gradient px-6 py-2 rounded-full text-white font-black text-[10px] uppercase tracking-widest shadow-sm hover:scale-105 transition-transform"
         >
           Вход
         </a>

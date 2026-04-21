@@ -5,9 +5,10 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Georgia", ui-serif, serif;
 
-  --color-brand-dark: #0A0A0B;
-  --color-brand-gold: #D4AF37;
-  --color-brand-white: #F8F9FA;
+  --color-brand-dark: #FDFBF7;
+  --color-brand-gold: #BC9C63;
+  --color-brand-accent: #E8DCC4;
+  --color-brand-text: #2D2A26;
 
   --radius-xl: 1rem;
   --radius-2xl: 1.5rem;
@@ -18,34 +19,34 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-brand-dark text-brand-white antialiased font-sans relative overflow-x-hidden;
+    @apply bg-brand-dark text-brand-text antialiased font-sans relative overflow-x-hidden;
   }
 
   body::before {
     content: "";
-    @apply fixed inset-0 z-[-1] pointer-events-none opacity-[0.05];
-    background: radial-gradient(circle at 50% 0%, var(--color-brand-gold) 0%, transparent 70%);
+    @apply fixed inset-0 z-[-1] pointer-events-none opacity-[0.15];
+    background: radial-gradient(circle at 50% 0%, var(--color-brand-accent) 0%, transparent 70%);
   }
 
   h1, h2, h3, h4 {
-    @apply font-serif;
+    @apply font-serif text-brand-text;
   }
 }
 
 @layer utilities {
   .glass {
-    @apply bg-white/3 backdrop-blur-md border border-white/8;
+    @apply bg-white/40 backdrop-blur-md border border-white/60 shadow-sm;
   }
 
   .gold-gradient {
-    background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
+    background: linear-gradient(135deg, #BC9C63 0%, #D4C4A3 100%);
   }
 
   .nav-link {
-    @apply text-[12px] uppercase tracking-[0.2em] opacity-60 hover:opacity-100 transition-opacity;
+    @apply text-[12px] uppercase tracking-[0.2em] text-brand-text/60 hover:text-brand-text/100 transition-colors;
   }
 
   .section-border {
-    @apply border-t border-white/5 pt-20 mt-20;
+    @apply border-t border-brand-accent/30 pt-20 mt-20;
   }
 }
