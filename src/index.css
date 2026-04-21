@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Georgia", ui-serif, serif;
+
+  --color-brand-dark: #0A0A0B;
+  --color-brand-gold: #D4AF37;
+  --color-brand-white: #F8F9FA;
+
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-brand-dark text-brand-white antialiased font-sans relative overflow-x-hidden;
+  }
+
+  body::before {
+    content: "";
+    @apply fixed inset-0 z-[-1] pointer-events-none opacity-[0.05];
+    background: radial-gradient(circle at 50% 0%, var(--color-brand-gold) 0%, transparent 70%);
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/3 backdrop-blur-md border border-white/8;
+  }
+
+  .gold-gradient {
+    background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
+  }
+
+  .nav-link {
+    @apply text-[12px] uppercase tracking-[0.2em] opacity-60 hover:opacity-100 transition-opacity;
+  }
+
+  .section-border {
+    @apply border-t border-white/5 pt-20 mt-20;
+  }
+}
